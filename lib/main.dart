@@ -11,7 +11,6 @@ void main() async {
 }
 
 
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xff0d2b7a),
       ),
-      home: const LoginScreen(),
+      home: const Auth(),
     );
   }
 }
