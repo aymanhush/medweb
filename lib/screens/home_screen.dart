@@ -6,6 +6,7 @@ import 'package:flutter_application_1/screens/articles_screen.dart';
 import 'package:flutter_application_1/screens/bmi_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_application_1/screens/calorie_screen.dart';
+import 'package:flutter_application_1/screens/feedback_screen.dart';
 import 'package:flutter_application_1/screens/shop_screen.dart';
 import 'package:flutter_application_1/screens/test_screen.dart';
 import 'package:flutter_application_1/screens/workout_screen.dart';
@@ -25,6 +26,38 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      drawer: Drawer(
+        child: SafeArea(
+          child: Column(
+            children: [
+              const Text("Welcome", 
+              style: TextStyle(fontSize: 20, color: Colors.black),
+              ),
+              Text(user.email!,
+              style: TextStyle(fontSize: 16),
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.logout),
+                title: Text('LogOut'),
+                onTap: () {FirebaseAuth.instance.signOut();},
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.feedback),
+                title: Text('Feedback'),
+                 onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Feedback_Screen()),
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
 
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,

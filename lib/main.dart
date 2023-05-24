@@ -4,6 +4,7 @@ import 'package:flutter_application_1/screens/alarm_screen.dart';
 import 'package:flutter_application_1/screens/articles_screen.dart';
 import 'package:flutter_application_1/screens/bmi_screen.dart';
 import 'package:flutter_application_1/screens/calorie_screen.dart';
+import 'package:flutter_application_1/screens/feedback_screen.dart';
 import 'package:flutter_application_1/screens/home_screen.dart';
 import 'package:flutter_application_1/screens/login-screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
         'testScreen':(context) => const Test_Screen(),
         'articlesScreen':(context) => const Articles_Screen(),
         'shopScreen':(context) => const Shop_Screen(),
+        'feedbackScreen':(context) => const Feedback_Screen(),
         
 
       },
