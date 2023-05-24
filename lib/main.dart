@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/login_screen_screen.dart';
+import 'package:flutter_application_1/auth.dart';
+import 'package:flutter_application_1/screens/home_screen.dart';
+import 'package:flutter_application_1/screens/login-screen.dart';
 import 'package:firebase_core/firebase_core.dart';
-
+import 'package:flutter_application_1/screens/reset_password_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,7 +16,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +23,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xff0d2b7a),
       ),
-      home: const Auth(),
+      routes: {
+        '/':(context) => const Auth(),
+        'loginScreen':(context) => const LoginScreen(),
+        'homeScreen':(context) => const HomeScreen(),
+        'resetPasswordScreen':(context) => const ResetPasswordScreen(),
+
+
+      },
     );
   }
 }
