@@ -8,10 +8,10 @@ import 'package:flutter_application_1/screens/feedback_screen.dart';
 import 'package:flutter_application_1/screens/home_screen.dart';
 import 'package:flutter_application_1/screens/login-screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_application_1/screens/quiz/quiz_screen.dart';
 import 'package:flutter_application_1/screens/reset_password_screen.dart';
 import 'package:flutter_application_1/screens/shop_screen.dart';
 import 'package:flutter_application_1/screens/signup_screen.dart';
-import 'package:flutter_application_1/screens/test_screen.dart';
 import 'package:flutter_application_1/screens/workout_screen.dart';
 
 void main() async {
@@ -45,10 +45,11 @@ class MyApp extends StatelessWidget {
         'workoutScreen':(context) => const Workout_Screen(),
         'calorieScreen':(context) => const Calorie_Screen(),
         'alarmScreen':(context) => const Alarm_Screen(),
-        'testScreen':(context) => const Test_Screen(),
         'articlesScreen':(context) => const Articles_Screen(),
         'shopScreen':(context) => const Shop_Screen(),
         'feedbackScreen':(context) => const Feedback_Screen(),
+        'quizkScreen':(context) =>  QuizScreen(),
+
         
 
       },

@@ -8,7 +8,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_application_1/screens/calorie_screen.dart';
 import 'package:flutter_application_1/screens/feedback_screen.dart';
 import 'package:flutter_application_1/screens/shop_screen.dart';
-import 'package:flutter_application_1/screens/test_screen.dart';
+import 'package:flutter_application_1/screens/welcome/welcome_screen.dart';
 import 'package:flutter_application_1/screens/workout_screen.dart';
 
 
@@ -243,7 +243,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Test_Screen()),
+                    MaterialPageRoute(builder: (context) => WelcomeScreen()),
                   );
                 },
               ),
