@@ -147,8 +147,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: GestureDetector(
+                    onTap: signUp,
                     child: Container(
-                      onTap: signUp,
                       padding: EdgeInsets.all(16),
                       decoration: BoxDecoration(
                         color: Colors.blue[900],

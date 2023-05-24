@@ -13,7 +13,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
   final _emailController =  TextEditingController();
   final _passwordController =  TextEditingController();
 
@@ -25,11 +24,9 @@ class _LoginScreenState extends State<LoginScreen> {
   void openResetPasswordScreen() {
     Navigator.of(context).pushReplacementNamed('resetPasswordScreen');
   }
-
   void openSignupScreen() {
     Navigator.of(context).pushReplacementNamed('signupScreen');
   }
-
 
   @override
   void dispose() {
@@ -37,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
     _emailController.dispose();
     _passwordController.dispose();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,8 +94,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextField(
-                        controller: _passwordController,
                         obscureText: true,
+                        controller: _passwordController,
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Password',
