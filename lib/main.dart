@@ -4,6 +4,8 @@ import 'package:flutter_application_1/screens/home_screen.dart';
 import 'package:flutter_application_1/screens/login-screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_application_1/screens/reset_password_screen.dart';
+import 'package:flutter_application_1/screens/signup_screen.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,6 +30,7 @@ class MyApp extends StatelessWidget {
         'loginScreen':(context) => const LoginScreen(),
         'homeScreen':(context) => const HomeScreen(),
         'resetPasswordScreen':(context) => const ResetPasswordScreen(),
+        'signupScreen':(context) => const SignupScreen(),
 
 
       },
