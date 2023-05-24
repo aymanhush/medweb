@@ -87,7 +87,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       GestureDetector(
-                        onTap: (),
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) {
+                            return ResetPasswordScreen();
+                          },
+                          ),
+                          );
+                        },
                         child: Text('Forget Passeord?', 
                           style: GoogleFonts.robotoCondensed(
                             color: Colors.blue[900],
@@ -139,7 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     GestureDetector(
-                      //onTap: ,
+                      onTap: openSignupScreen,
                       child: Text('Sign up now',
                        style: GoogleFonts.robotoCondensed(
                         color: Colors.blue[900],
