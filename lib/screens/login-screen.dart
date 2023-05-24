@@ -26,6 +26,11 @@ class _LoginScreenState extends State<LoginScreen> {
     Navigator.of(context).pushReplacementNamed('resetPasswordScreen');
   }
 
+  void openSignupScreen() {
+    Navigator.of(context).pushReplacementNamed('signupScreen');
+  }
+
+
   @override
   void dispose() {
     super.dispose();

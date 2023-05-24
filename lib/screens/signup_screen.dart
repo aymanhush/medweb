@@ -10,6 +10,41 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
+  final _emailController =  TextEditingController();
+  final _passwordController =  TextEditingController();
+  final _confirmpasswordController = TextEditingController();
+
+  Future signUp() async {
+    if(passwordConfirmed()) {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(email: _emailController.text.trim(), password: _passwordController.text.trim(),);
+      Navigator.of(context).pushNamed('/');
+    }
+  }
+  
+  bool passwordConfirmed(){
+    if (_passwordController.text.trim() == 
+    _confirmpasswordController.text.trim()) {
+      return true;
+    } else{
+      return false;
+    }
+  }
+
+  void signin() {
+    Navigator.of(context).pushReplacementNamed('loginScreen');
+  }
+
+  void openSignupScreen() {
+    Navigator.of(context).pushReplacementNamed('signupScreen');
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+    _confirmpasswordController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +81,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextField(
+                        controller: _emailController,
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Email',
@@ -68,6 +104,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextField(
+                        controller: _passwordController,
                         obscureText: true,
                         decoration: InputDecoration(
                           border: InputBorder.none,
@@ -92,6 +129,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextField(
+                        controller: _confirmpasswordController,
                         obscureText: true,
                         decoration: InputDecoration(
                           border: InputBorder.none,
@@ -110,6 +148,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: GestureDetector(
                     child: Container(
+                      onTap: signUp,
                       padding: EdgeInsets.all(16),
                       decoration: BoxDecoration(
                         color: Colors.blue[900],
@@ -140,6 +179,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       ),
                     ),
                     GestureDetector(
+                      onTap: signin,
                       child: Text('Sign in here',
                        style: GoogleFonts.robotoCondensed(
                         color: Colors.blue[900],
