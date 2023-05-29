@@ -1,4 +1,4 @@
-#Wed May 24 17:59:06 TRT 2023
-base.0=C\:\\MedWeb\\medweb\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Mon May 29 14:39:01 TRT 2023
+base.0=D\:\\new med\\medweb\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

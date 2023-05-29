@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.flutter_application_1.app-mergeDebugResources-6:/values-ko/values-ko.xml",
+            "outputFile": "com.example.flutter_application_1.app-mergeDebugResources-14:/values-ko/values-ko.xml",
             "map": [
                 {
                     "source": "C:\\Users\\AIMAN\\.gradle\\caches\\transforms-3\\c1463af6cb467bf02a2c891016443d37\\transformed\\browser-1.4.0\\res\\values-ko\\values-ko.xml",
