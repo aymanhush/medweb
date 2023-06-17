@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/bmi/result_screen.dart';
 import 'bmi_button.dart';
 import 'bmi_card.dart';
+import 'calResult.dart';
 import 'custom_buttom.dart';
 
 class Bmi_Screen extends StatefulWidget {
@@ -126,9 +128,24 @@ class _Bmi_ScreenState extends State<Bmi_Screen> {
             const Spacer(),
             CustomButton(
               title: 'CALCULATE',
-              onTap: (){
-                  
-                },
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      CalResult bmiCalculator = CalResult(
+                        height: height, 
+                        weight: weight,
+                        );
+                      return ResultScreen(
+                        bmiResult: bmiCalculator.CalculateBMI(),
+                        resultText: bmiCalculator.getResult(),
+                        interpretation: bmiCalculator.getReview(),
+                      );
+                    },
+                  ),
+                );
+              },
             ),
           ],
         ),
@@ -136,4 +153,3 @@ class _Bmi_ScreenState extends State<Bmi_Screen> {
     );
   }
 }
-
