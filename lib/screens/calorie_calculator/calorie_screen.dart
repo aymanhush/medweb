@@ -114,7 +114,13 @@ class Calorie__ScreenState extends State<Calorie_Screen> {
                           chickenNuggetCount: chickenNuggetCount,
                           largeCokeCount: largeCokeCount,
                           softServeCount: softServeCount);
-
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ResultsPage(
+                                    calorieSum: calc.calculateCalories(),
+                                    resultText: calc.displayMessage(),
+                                  )));    
                     });
                   },
                 ),
