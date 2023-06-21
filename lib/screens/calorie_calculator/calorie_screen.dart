@@ -7,6 +7,7 @@ import 'package:flutter_application_1/screens/calorie_calculator/sidesMenu.dart'
 import 'package:flutter_application_1/screens/calorie_calculator/BottomButton.dart';
 import 'package:flutter_application_1/screens/calorie_calculator/Calculator_Brain.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_1/screens/calorie_calculator/resultsPage.dart';
 
 class Calorie_Screen extends StatefulWidget {
   const Calorie_Screen({super.key});
@@ -102,7 +103,19 @@ class Calorie__ScreenState extends State<Calorie_Screen> {
                 child: BottomButton(
                   text: 'Total Calories',
                   onPressed: () {
-                    
+                    setState(() {
+                      //navigate to second page
+                      CalculatorBrain calc = CalculatorBrain(
+                          bigMacCount: bigMacCount,
+                          cheeseBurgerCount: cheeseBurgerCount,
+                          chickenBurgerCount: chickenBurgerCount,
+                          quarterPounderCount: quarterPounderCount,
+                          largeFriesCount: largeFriesCount,
+                          chickenNuggetCount: chickenNuggetCount,
+                          largeCokeCount: largeCokeCount,
+                          softServeCount: softServeCount);
+
+                    });
                   },
                 ),
               ),
