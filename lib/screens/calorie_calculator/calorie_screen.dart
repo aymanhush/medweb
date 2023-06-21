@@ -128,7 +128,15 @@ class Calorie__ScreenState extends State<Calorie_Screen> {
               SizedBox(
                 width: 10,
               ),
-              
+              Expanded(
+                child: BottomButton(
+                    onPressed: () {
+                      setState(() {
+                        reset();
+                      });
+                    },
+                    text: 'Reset'),
+              )
             ],
           )
         ],
