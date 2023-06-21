@@ -5,7 +5,7 @@ import 'package:flutter_application_1/screens/alarm_screen.dart';
 import 'package:flutter_application_1/screens/articles_screen.dart';
 import 'package:flutter_application_1/screens/bmi/bmi_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_application_1/screens/calorie_screen.dart';
+import 'package:flutter_application_1/screens/calorie_calculator/calorie_screen.dart';
 import 'package:flutter_application_1/screens/feedback_screen.dart';
 import 'package:flutter_application_1/screens/shop_screen.dart';
 import 'package:flutter_application_1/screens/welcome/welcome_screen.dart';
