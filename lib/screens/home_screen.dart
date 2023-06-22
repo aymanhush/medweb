@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_application_1/screens/alarm_screen.dart';
+import 'package:flutter_application_1/screens/medication_alarm/alarm_screen.dart';
 import 'package:flutter_application_1/screens/articles_screen.dart';
 import 'package:flutter_application_1/screens/bmi/bmi_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
