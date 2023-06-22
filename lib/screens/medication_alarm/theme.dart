@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:get/get.dart';
 
 const Color bluishClr = Color(0xff0d2b7a);
 const Color yellowClr = Color(0xFFFFB746);
@@ -25,4 +27,22 @@ class Themes extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Placeholder();
   }
+}
+TextStyle get subHeadingStyle{
+  return GoogleFonts.lato(
+    textStyle: TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+      color: Get.isDarkMode?Colors.grey[400]:Colors.grey
+    )
+  );
+}
+TextStyle get headingStyle{
+  return GoogleFonts.lato(
+    textStyle: TextStyle(
+      fontSize: 25,
+      fontWeight: FontWeight.bold,
+      color: Get.isDarkMode?Colors.white:Colors.black
+    )
+  );
 }

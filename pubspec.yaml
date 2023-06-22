@@ -41,6 +41,8 @@ dependencies:
   firebase_core:
   firebase_auth:
   get_storage:
+  intl:
+  date_picker_timeline:
 
 dev_dependencies:
   flutter_test:
