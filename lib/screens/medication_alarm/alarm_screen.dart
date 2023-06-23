@@ -1,6 +1,7 @@
 import 'package:date_picker_timeline/date_picker_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controllers/task_controller.dart';
+import 'package:flutter_application_1/models/task.dart';
 import 'package:flutter_application_1/screens/calorie_calculator/variables.dart';
 import 'package:flutter_application_1/screens/medication_alarm/add_task_bar.dart';
 import 'package:flutter_application_1/screens/medication_alarm/services/theme_services.dart';
@@ -9,7 +10,8 @@ import 'package:flutter_application_1/screens/medication_alarm/widgets/button.da
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'widgets/task_tile.dart';
 class Alarm_Screen extends StatefulWidget {
   const Alarm_Screen({super.key});
 
@@ -43,19 +45,30 @@ class _Alarm_ScreenState extends State<Alarm_Screen> {
 
           itemBuilder: (_, index){
             print(_taskController.taskList.length);
-          return Container(
-            width: 100,
-            height: 50,
-            color:Colors.green,
-            margin: const EdgeInsets.only(bottom: 10),
-            child: Text(
-              _taskController.taskList[index].title.toString()
-
-            ),
-          );
+          
+            return AnimationConfiguration.staggeredList(
+              position: index, 
+              child: SlideAnimation(
+                child: FadeInAnimation(
+                  child: Row(
+                    children: [
+                      GestureDetector(
+                        onTap: (){
+                          _showBottumSheet(context, _taskController.taskList[index]);
+                        },
+                        child: TaskTile(_taskController.taskList[index]),
+                      )
+                    ],
+                    )
+                    )
+                    ));
+          
           });
       }),
     );
+  }
+  _showBottumSheet(BuildContext context, Task task){
+
   }
   
   _addDateBar(){

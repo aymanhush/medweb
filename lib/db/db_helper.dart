@@ -1,6 +1,5 @@
 import 'package:flutter_application_1/models/task.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:path/path.dart';
 
 class DBHelper{
   static Database? _db;
@@ -24,9 +23,9 @@ class DBHelper{
           return db.execute(
             "CREATE TABLE $_tableName("
             "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            "title TEXT, note TEXT, date TEXT, "
-            "startTime TEXT, endTime TEXT, "
-            "remind INTEGER, repeat TEXT, "
+            "title STRING, note TEXT, date STRING, "
+            "startTime STRING, endTime STRING, "
+            "remind INTEGER, repeat STRING, "
             "color INTEGER, "
             "isCompleted INTEGER)",
 
@@ -44,5 +43,9 @@ class DBHelper{
   static Future<List<Map<String, dynamic>>> query() async {
     print("query function called");
     return await _db!.query(_tableName);
+  }
+
+  static delete(Task task)async{
+    return await _db!.delete(_tableName, where: 'id=?', whereArgs: [task.id]);
   }
 }
