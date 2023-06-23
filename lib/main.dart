@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/auth.dart';
+import 'package:flutter_application_1/db/db_helper.dart';
 import 'package:flutter_application_1/screens/medication_alarm/alarm_screen.dart';
 import 'package:flutter_application_1/screens/articles_screen.dart';
 import 'package:flutter_application_1/screens/bmi/bmi_screen.dart';
@@ -20,6 +21,7 @@ import 'package:get_storage/get_storage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await DBHelper.initDb();
   await GetStorage.init();
   await Firebase.initializeApp();
   

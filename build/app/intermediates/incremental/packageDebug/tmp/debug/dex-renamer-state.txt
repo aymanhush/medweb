@@ -1,4 +1,4 @@
-#Thu Jun 22 21:17:08 TRT 2023
+#Fri Jun 23 06:30:20 TRT 2023
 base.0=D\:\\new med\\medweb - Copy\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

@@ -1,6 +1,8 @@
 import 'package:date_picker_timeline/date_picker_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controllers/task_controller.dart';
 import 'package:flutter_application_1/screens/calorie_calculator/variables.dart';
+import 'package:flutter_application_1/screens/medication_alarm/add_task_bar.dart';
 import 'package:flutter_application_1/screens/medication_alarm/services/theme_services.dart';
 import 'package:flutter_application_1/screens/medication_alarm/theme.dart';
 import 'package:flutter_application_1/screens/medication_alarm/widgets/button.dart';
@@ -17,16 +19,47 @@ class Alarm_Screen extends StatefulWidget {
 
 class _Alarm_ScreenState extends State<Alarm_Screen> {
   DateTime _selectedDate = DateTime.now();
+  final _taskController = Get.put(TaskController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(),
-      
       body: Column(
         children: [
           _addTaskBar(),
-          Container(
+          _addDateBar(),
+          SizedBox(height: 10,),
+          _showTasks(),
+        ],
+      ),
+    );
+  }
+  _showTasks(){
+    return Expanded(
+      child: Obx(() {
+        return ListView.builder(
+          itemCount: _taskController.taskList.length,
+
+          itemBuilder: (_, index){
+            print(_taskController.taskList.length);
+          return Container(
+            width: 100,
+            height: 50,
+            color:Colors.green,
+            margin: const EdgeInsets.only(bottom: 10),
+            child: Text(
+              _taskController.taskList[index].title.toString()
+
+            ),
+          );
+          });
+      }),
+    );
+  }
+  
+  _addDateBar(){
+    return Container(
             margin: const EdgeInsets.only(top: 20, left: 20),
             child: DatePicker(
               DateTime.now(),
@@ -60,11 +93,7 @@ class _Alarm_ScreenState extends State<Alarm_Screen> {
                 _selectedDate=date;
                 },
               ),
-          )
-        ]
-      ),
-
-    );
+          );    
   }
   _addTaskBar(){
     return Container(
@@ -83,10 +112,15 @@ class _Alarm_ScreenState extends State<Alarm_Screen> {
                     ],
                   ),
                 ),
-                MyButton(label: "+Add Task", onTap:()=>null,)
+                MyButton(label: "+Add Task", onTap:() async {
+                  await Get.to(AddTaskPage());
+                  _taskController.getTasks();
+                }
+                )
               ],
             ),
           );
+          
   }
   _appBar(){
     return AppBar(
