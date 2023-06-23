@@ -90,6 +90,14 @@ class _Alarm_ScreenState extends State<Alarm_Screen> {
             ?Container()
             : 
             _bottomSheetButton(
+              label: "Task Completed", 
+              onTap: (){
+                Get.back();
+              }, 
+              clr:primaryClr,
+              context: context
+            ),
+            _bottomSheetButton(
               label: "Delete Task", 
               onTap: (){
                 _taskController.delete(task);
