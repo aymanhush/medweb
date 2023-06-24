@@ -45,6 +45,10 @@ dependencies:
   intl:
   date_picker_timeline:
   flutter_staggered_animations:
+  #flutter_local_notifications:
+  #flutter_native_timezone: 
+  lipsum: ^1.0.1
+  cached_network_image: ^3.0.0
   
 
 

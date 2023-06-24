@@ -2,7 +2,6 @@ import 'package:date_picker_timeline/date_picker_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controllers/task_controller.dart';
 import 'package:flutter_application_1/models/task.dart';
-import 'package:flutter_application_1/screens/calorie_calculator/variables.dart';
 import 'package:flutter_application_1/screens/medication_alarm/add_task_bar.dart';
 import 'package:flutter_application_1/screens/medication_alarm/services/theme_services.dart';
 import 'package:flutter_application_1/screens/medication_alarm/theme.dart';
@@ -22,6 +21,7 @@ class Alarm_Screen extends StatefulWidget {
 class _Alarm_ScreenState extends State<Alarm_Screen> {
   DateTime _selectedDate = DateTime.now();
   final _taskController = Get.put(TaskController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class _Alarm_ScreenState extends State<Alarm_Screen> {
 
           itemBuilder: (_, index){
             print(_taskController.taskList.length);
-          
+
             return AnimationConfiguration.staggeredList(
               position: index, 
               child: SlideAnimation(
@@ -230,6 +230,7 @@ class _Alarm_ScreenState extends State<Alarm_Screen> {
       leading: GestureDetector(
         onTap:(){
           ThemeService().switchTheme();
+          
         },
         
         child: Icon(Icons.nightlight_round,size: 20,), 

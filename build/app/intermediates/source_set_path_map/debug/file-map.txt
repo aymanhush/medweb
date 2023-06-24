@@ -18,3 +18,4 @@ com.example.flutter_application_1.app-merged_res-16 D:\new med\medweb - Copy\bui
 com.example.flutter_application_1.app-packaged_res-17 D:\new med\medweb - Copy\build\firebase_auth\intermediates\packaged_res\debug
 com.example.flutter_application_1.app-packaged_res-18 D:\new med\medweb - Copy\build\firebase_core\intermediates\packaged_res\debug
 com.example.flutter_application_1.app-packaged_res-19 D:\new med\medweb - Copy\build\path_provider_android\intermediates\packaged_res\debug
+com.example.flutter_application_1.app-packaged_res-20 D:\new med\medweb - Copy\build\sqflite\intermediates\packaged_res\debug

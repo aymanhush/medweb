@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/auth.dart';
 import 'package:flutter_application_1/db/db_helper.dart';
 import 'package:flutter_application_1/screens/medication_alarm/alarm_screen.dart';
-import 'package:flutter_application_1/screens/articles_screen.dart';
+import 'package:flutter_application_1/screens/articles/articles_screen.dart';
 import 'package:flutter_application_1/screens/bmi/bmi_screen.dart';
 import 'package:flutter_application_1/screens/calorie_calculator/calorie_screen.dart';
 import 'package:flutter_application_1/screens/feedback_screen.dart';
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
         'workoutScreen':(context) => const Workout_Screen(),
         'calorieScreen':(context) => const Calorie_Screen(),
         'alarmScreen':(context) => const Alarm_Screen(),
-        'articlesScreen':(context) => const Articles_Screen(),
+        'articlesScreen':(context) => const ArticlesScreen(),
         'shopScreen':(context) => const Shop_Screen(),
         'feedbackScreen':(context) => const Feedback_Screen(),
         'quizkScreen':(context) =>  QuizScreen(),
