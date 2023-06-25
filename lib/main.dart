@@ -15,7 +15,7 @@ import 'package:flutter_application_1/screens/quiz/quiz_screen.dart';
 import 'package:flutter_application_1/screens/reset_password_screen.dart';
 import 'package:flutter_application_1/screens/shop_screen.dart';
 import 'package:flutter_application_1/screens/signup_screen.dart';
-import 'package:flutter_application_1/screens/workout_screen.dart';
+import 'package:flutter_application_1/screens/workout/workout_screen.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
 

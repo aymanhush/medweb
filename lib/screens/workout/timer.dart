@@ -1,13 +1,15 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
-class Workout_Screen extends StatefulWidget {
-  const Workout_Screen({super.key});
+class TimerScreen extends StatefulWidget {
+  const TimerScreen({Key? key}) : super(key: key);
 
   @override
-  State<Workout_Screen> createState() => _Workout_ScreenState();
+  _TimerScreenState createState() => _TimerScreenState();
 }
 
-class _Workout_ScreenState extends State<Workout_Screen> {
+class _TimerScreenState extends State<TimerScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +20,9 @@ class _Workout_ScreenState extends State<Workout_Screen> {
         ),
         elevation: 0.0,
         backgroundColor: Theme.of(context).primaryColor,
-        title: const Text('Workout'),
         centerTitle: true,
       ),
-
+      
     );
   }
 }

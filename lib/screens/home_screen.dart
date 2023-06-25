@@ -9,7 +9,7 @@ import 'package:flutter_application_1/screens/calorie_calculator/calorie_screen.
 import 'package:flutter_application_1/screens/feedback_screen.dart';
 import 'package:flutter_application_1/screens/shop_screen.dart';
 import 'package:flutter_application_1/screens/welcome/welcome_screen.dart';
-import 'package:flutter_application_1/screens/workout_screen.dart';
+import 'package:flutter_application_1/screens/workout/workout_screen.dart';
 
 
 class HomeScreen extends StatefulWidget {
